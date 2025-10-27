@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-       "dev": "node --watch src/server.js"
+       "dev": "node --watch src/server.js",
+       "collections": "node src/scripts/collections.js"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,58 @@
+### Cadastrar Autor
+
+POST http://localhost:3333/authors
+Content-Type: application/json
+
+{
+    "name": "Almir Sater",
+    "birthDate": "1982-01-03",
+    "sex": "Male",
+    "writingGenre": "Country"
+}
+
+### Cadastrar Usuário 
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "name": "JOse Carlos",
+    "birthDate": "1932-07-20",
+    "sex": "Female",
+    "address": "Rua Almirante, 1, Centro, Cataguases/MG"
+}
+
+### Cadastrar Livro (Precisa do ObjectID do autor cadastrado referente ao livro)
+POST http://localhost:3333/books
+Content-Type: application/json
+
+{
+    "title": "A bela e a Fera",
+    "synopsis": "Um romance",
+    "year": 1912,
+    "authorId": "68fda85dc4107a521874903f" 
+}
+
+### Listar Autores 
+GET http://localhost:3333/authors
+
+###  Listar Usuários
+GET http://localhost:3333/users
+
+###  Listar Livros 
+GET http://localhost:3333/books
+
+
+
+### Realizar Empréstimo 
+# Substitua os campos 'bookId' e 'userId' pelos IDs corretos.
+POST http://localhost:3333/loans
+Content-Type: application/json
+
+{
+    "bookId": "68fda98ac4107a5218749044",
+    "userId": "68fda918c4107a5218749041"
+}
+
+
+# Para zerar o banco de dados e preparar para novos testes, execute no terminal:
+# npm run collections
